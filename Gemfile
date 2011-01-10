@@ -12,9 +12,15 @@ gem 'annotate-models'
 
 group :test do
   gem 'shoulda'
+  gem 'rspec'
   gem 'rspec-rails'
+  gem 'spork'
 end
 
+gem 'autotest'
+gem 'autotest-rails-pure'
+
+gem 'haml'
 # Use unicorn as the web server
 # gem 'unicorn'
 

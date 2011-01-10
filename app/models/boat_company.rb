@@ -14,4 +14,5 @@
 #
 
 class BoatCompany < ActiveRecord::Base
+  validates_presence_of :name, :secret
 end

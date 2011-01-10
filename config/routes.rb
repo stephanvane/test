@@ -1,4 +1,5 @@
 Bha::Application.routes.draw do
+  get 'all-boats' => 'boats#index', :as => :boats
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
