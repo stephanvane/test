@@ -46,5 +46,5 @@ class Boat < ActiveRecord::Base
   validates_numericality_of :price1, :price2, :price3
   validates_numericality_of :max_persons, :max_persons_buffet, :max_persons_dinner
   validates_numericality_of :min_hours
-  validates_format_of :url, :with => /^[\w+\-]$/
+  validates_format_of :url, :with => /^[\w\-]+$/
 end
