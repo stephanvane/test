@@ -1,15 +1,50 @@
 !!! 5
 %html
   %head
-    %title Bha
+    %title title
     = stylesheet_link_tag :all
     = javascript_include_tag :defaults
     = csrf_meta_tag
-
   %body
-    #menu
+    #header.container
+      #logo
+        %h1
+          = link_to 'Boot huren Amsterdam.com', :root
+    #topmenu.container
+    #menu.container    
       %ul
         %li= link_to 'Home', :root
         %li= link_to 'All boats', :boats
         %li= link_to 'Getting married', :married
-    = yield
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asfd
+    #page.container.three-columns
+      .column1
+        .box-style1
+          %h2 Alle huurboten op een rij
+          %ul
+            %li asdf
+            %li asdf
+            %li asdf
+            %li asdf
+            %li asdf
+      .column2
+        .box-style3
+          .title
+            %h2 Welkom bij Boot Huren Amsterdam
+          .content
+            %h3.style1 asdffasdfasdf
+            %p asdfasdf
+        = yield
+      .column
+        .box-style5.stock-ticker
+          %h2 Aanbieding: Wijnproeverij
+          .content
+            %p asdfasdf
+    #footer
+      .container
+        %p.legal
+        %p.links
