@@ -1,6 +1,11 @@
 Bha::Application.routes.draw do
-  get 'all-boats' => 'boats#index', :as => :boats
-  # The priority is based upon order of creation:
+  # Static pages
+  get 'married' => 'pages#married'
+  
+  get 'boats' => 'boats#index'
+  
+  root :to => 'boats#index'
+  # >The prior ity is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
@@ -57,3 +62,5 @@ Bha::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+
+ActionDispatch::Routing::Translator.translate_from_file('config','i18n-routes.yml')
