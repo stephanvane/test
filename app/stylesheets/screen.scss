@@ -1,0 +1,166 @@
+@import "blueprint/reset";
+@import "partials/base";
+@import "blueprint";
+@import "partials/lists";
+@import "partials/boxes";
+
+body {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+  background: white image_url('homepage01.gif') repeat-x left top;
+  
+  h1,h2,h3 {
+    font-weight: bold;
+  }
+
+
+  form {
+    @include blueprint-form;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #005876;
+  }
+
+  h3.style1 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  p, ol, ul {
+  	margin-top: 0px;
+  	margin-bottom: 18px;
+  	text-align: justify;
+  	line-height: 17px;
+  }
+  .more {
+    height: 22px;
+  	padding: 8px 0px 0px 15px;
+  	background: image_url('homepage10.gif') repeat-x left top;
+  	a {
+    	padding-left: 17px;
+    	background: image_url('homepage11.gif') no-repeat left center;
+    	color: #56636F;
+  	}
+  }
+
+  a:hover {
+      text-decoration: none;    
+  }
+
+  img.border {
+    padding: 3px;
+    border: 1px solid #CBD0D4;
+  }
+
+  #topmenu {
+  	color: #3F6967;
+  	p {
+  	  margin: 0px;
+  	}
+  }
+
+  #menu {
+    height: 38px;
+    ul {
+    	margin: 0px;
+    	padding: 12px 0px 0px 0px;
+    	list-style: none;
+    	line-height: normal;
+    }
+    li {
+    	float: left;
+    	padding: 0px 20px 0px 20px;
+    	background: image_url('homepage04.gif') no-repeat left top;
+      .first {
+      	padding-left: 15px;
+      	background: none;
+      }
+    }
+    a {
+    	text-decoration: none;
+    	font-weight: bold;
+    	color: #FFFFFF;
+      &:hover {
+  	    text-decoration: underline;
+      }
+    }
+  }
+
+  #page {
+    width: 980px;
+    padding: 10px;
+    background: #FFF;
+    @include clearfix;
+  }
+
+  .three-columns {
+    .column1 {
+    	float: left;
+    	width: 240px;
+    	padding: 0px 0px 0px 0px;
+    }
+    .column2 {
+    	float: left;
+    	width: 520px;
+    	padding: 0px 10px;
+    }
+    .column3 {
+    	float: left;
+    	width: 200px;
+    	padding: 0px 0px 0px 0px;
+    }
+  }
+
+  .two-columns {
+    #content {
+      float: right;
+      width: 730px;
+    }
+    #sidebar {
+      float: left;
+      width: 240px;
+    }
+  }
+
+  #footer {
+    background: #D8E9EF;
+    .container {
+      width: 970px;
+      padding: 30px 0px;
+      height: 50px;
+    }
+    p {
+      margin: 0px;
+      padding: 0px;
+      color: #5F8B9D;
+    }
+    a {
+      padding: 0px 10px;
+      color: #5F8B9D;
+    }
+    .legal {
+      float: left;
+    }
+    .links {
+      float:right;
+    }
+  }
+
+  .container {
+    width: 1000px;
+    margin: 0px auto;
+  }
+
+  #header {
+    height: 106px;
+  }
+
+  #topmenu {
+    height: 30px;
+  }
+}

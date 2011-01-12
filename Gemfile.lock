@@ -35,6 +35,8 @@ GEM
       ZenTest (>= 4.4.1)
     autotest-rails-pure (4.1.2)
     builder (2.1.2)
+    compass (0.10.6)
+      haml (>= 3.0.4)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -97,6 +99,7 @@ DEPENDENCIES
   annotate-models
   autotest
   autotest-rails-pure
+  compass (>= 0.10.6)
   globalize3
   haml
   rails (= 3.0.3)

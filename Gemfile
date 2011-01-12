@@ -10,6 +10,7 @@ gem 'translate_routes'
 
 # Views
 gem 'haml'
+gem "compass", ">= 0.10.6"
 
 # Other
 gem 'annotate-models'
