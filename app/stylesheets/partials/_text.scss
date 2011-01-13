@@ -1,0 +1,29 @@
+h1,h2,h3 {
+  font-weight: bold;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: #005876;
+}
+
+h3.style1 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.more {
+  height: 22px;
+	padding: 8px 0px 0px 15px;
+	background: image_url('homepage10.gif') repeat-x left top;
+	a {
+  	padding-left: 17px;
+  	background: image_url('homepage11.gif') no-repeat left center;
+  	color: #56636F;
+	}
+}
+
+a:hover {
+    text-decoration: none;    
+}

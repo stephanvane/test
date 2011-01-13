@@ -1,1 +1,38 @@
-%h2 All boats
+.box-style3
+  .title
+    %h2
+      = link_to 'Home', :root
+      > Alle boten
+  .content
+    %h3.style1 Alle boten
+    %p
+      Boot Huren Amsterdam brengt het volledige boten aanbod van alle 
+      rederijen in Amsterdam in kaart en biedt u de mogelijkheid te 
+      vergelijken en de boot te kiezen die het beste aansluit op uw wensen. 
+      Kijk, vergelijk en boek met laagste prijsgarantie en zonder 
+      reserveringskosten.
+      
+.box-style3#boat_list
+  .title
+    Sorteer op: 
+  .content
+    %ul.list3
+      %li.first
+        = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), married_path()
+        %p 
+          =link_to 'Sloep Zelfstandig te varen', married_path
+          (85 reacties)
+        %p
+          Huur nu uw eigen zelfstandig te varen sloep en ontdek al varend over 
+          de grachten van Amsterdam en geheel op eigen initiatief al het moois 
+          dat de stad te bieden heeft. Bent u op zoek ...
+      %li
+        = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/ondine.jpg'), married_path
+        %p
+          =link_to 'Salonboot Ondine', married_path
+          (49 reacties)
+        %p
+          Salonboot Ondine is een buitengewoon mooie en zeer luxe authentiek 
+          Amsterdamse salonboot van de befaamde scheepswerf ’t Kromhout. ...
+        %p
+          =link_to 'Meer informatie', married_path
