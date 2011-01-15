@@ -14,6 +14,7 @@ gem "compass", ">= 0.10.6"
 
 # Other
 gem 'annotate-models'
+gem 'jquery-rails'
 
 # Test gems
 group :test do
