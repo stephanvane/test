@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(:version => 20110109203626) do
   create_table "boat_translations", :force => true do |t|
     t.integer  "boat_id"
     t.string   "locale"
-    t.string   "boat_type"
-    t.text     "description"
     t.string   "url"
+    t.text     "description"
+    t.string   "boat_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
