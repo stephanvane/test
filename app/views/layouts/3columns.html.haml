@@ -1,0 +1,19 @@
+- content_for :page do
+  #page.container.three-columns
+    .column1
+      .box-style1
+        %h2 Alle huurboten op een rij
+        %ul
+          %li asdf
+          %li asdf
+          %li asdf
+          %li asdf
+          %li asdf
+    .column2
+      = yield
+    .column3
+      .box-style5.stock-ticker
+        %h2 Aanbieding: Wijnproeverij
+        .content
+          %p asdfasdf
+= render :file => 'layouts/application'

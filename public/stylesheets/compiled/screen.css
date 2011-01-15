@@ -557,14 +557,14 @@ body {
 }
 
 /* line 106, ../../../app/stylesheets/partials/_layout.scss */
-.two-columns #content {
-  float: right;
-  width: 730px;
-}
-/* line 110, ../../../app/stylesheets/partials/_layout.scss */
-.two-columns #sidebar {
+.two-columns .column1 {
   float: left;
   width: 240px;
+}
+/* line 110, ../../../app/stylesheets/partials/_layout.scss */
+.two-columns .column2 {
+  float: right;
+  width: 730px;
 }
 
 /* line 18, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
@@ -855,36 +855,38 @@ ul.list3 {
 }
 /* line 46, ../../../app/stylesheets/partials/_lists.scss */
 ul.list3 li {
+  overflow: hidden;
+  *zoom: 1;
   padding: 20px 0px;
   border-top: 1px solid #D0D4D8;
 }
-/* line 49, ../../../app/stylesheets/partials/_lists.scss */
-ul.list3 li.first {
+/* line 50, ../../../app/stylesheets/partials/_lists.scss */
+ul.list3 li:first-child {
   padding-top: 0px;
   border: none;
 }
-/* line 54, ../../../app/stylesheets/partials/_lists.scss */
+/* line 55, ../../../app/stylesheets/partials/_lists.scss */
 ul.list3 h3 {
   margin: 0px 0px 10px 0px;
   font-weight: normal;
   color: #8B97A0;
 }
-/* line 58, ../../../app/stylesheets/partials/_lists.scss */
+/* line 59, ../../../app/stylesheets/partials/_lists.scss */
 ul.list3 h3 a {
   text-decoration: none;
   font-weight: bold;
   color: #005876;
 }
-/* line 62, ../../../app/stylesheets/partials/_lists.scss */
+/* line 63, ../../../app/stylesheets/partials/_lists.scss */
 ul.list3 h3 a:hover {
   text-decoration: underline;
   color: #0090BA;
 }
-/* line 68, ../../../app/stylesheets/partials/_lists.scss */
+/* line 69, ../../../app/stylesheets/partials/_lists.scss */
 ul.list3 p {
   margin: 0px;
 }
-/* line 71, ../../../app/stylesheets/partials/_lists.scss */
+/* line 72, ../../../app/stylesheets/partials/_lists.scss */
 ul.list3 img {
   border: 1px solid #CBD0D4;
   padding: 3px;

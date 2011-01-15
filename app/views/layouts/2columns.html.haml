@@ -1,0 +1,14 @@
+- content_for :page do
+  #page.container.two-columns
+    .column1
+      .box-style1
+        %h2 Alle huurboten op een rij
+        %ul
+          %li asdf
+          %li asdf
+          %li asdf
+          %li asdf
+          %li asdf
+    .column2
+      = yield
+= render :file => 'layouts/application'

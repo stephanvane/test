@@ -47,4 +47,8 @@ class Boat < ActiveRecord::Base
   validates_numericality_of :max_persons, :max_persons_buffet, :max_persons_dinner
   validates_numericality_of :min_hours
   validates_format_of :url, :with => /^[\w\-]+$/
+  
+  def display_name
+    "#{self.boat_type.capitalize} #{self.name.capitalize}"
+  end
 end

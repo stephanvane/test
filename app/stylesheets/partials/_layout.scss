@@ -103,13 +103,13 @@ body {
 }
 
 .two-columns {
-  #content {
-    float: right;
-    width: 730px;
-  }
-  #sidebar {
+  .column1 {
     float: left;
     width: 240px;
+  }
+  .column2 {
+    float: right;
+    width: 730px;
   }
 }
 

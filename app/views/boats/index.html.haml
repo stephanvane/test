@@ -17,22 +17,13 @@
     Sorteer op: 
   .content
     %ul.list3
-      %li.first
-        = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), married_path()
-        %p 
-          =link_to 'Sloep Zelfstandig te varen', married_path
-          (85 reacties)
-        %p
-          Huur nu uw eigen zelfstandig te varen sloep en ontdek al varend over 
-          de grachten van Amsterdam en geheel op eigen initiatief al het moois 
-          dat de stad te bieden heeft. Bent u op zoek ...
-      %li
-        = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/ondine.jpg'), married_path
-        %p
-          =link_to 'Salonboot Ondine', married_path
-          (49 reacties)
-        %p
-          Salonboot Ondine is een buitengewoon mooie en zeer luxe authentiek 
-          Amsterdamse salonboot van de befaamde scheepswerf ’t Kromhout. ...
-        %p
-          =link_to 'Meer informatie', married_path
+      - @boats.each do |boat|
+        %li.first
+          = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), married_path()
+          %p 
+            =link_to boat.display_name, married_path
+            (85 reacties)
+          %p
+            =truncate boat.description, :separator => ' ', :length => 235
+          %p
+            =link_to 'Meer informatie', married_path
