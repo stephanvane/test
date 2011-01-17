@@ -1,0 +1,248 @@
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+/* line 6, ../../../app/stylesheets/colorbox.scss */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* line 7, ../../../app/stylesheets/colorbox.scss */
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, ../../../app/stylesheets/colorbox.scss */
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+
+/* line 9, ../../../app/stylesheets/colorbox.scss */
+#cboxContent {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 10, ../../../app/stylesheets/colorbox.scss */
+#cboxLoadedContent {
+  overflow: auto;
+}
+
+/* line 11, ../../../app/stylesheets/colorbox.scss */
+#cboxLoadedContent iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* line 12, ../../../app/stylesheets/colorbox.scss */
+#cboxTitle {
+  margin: 0;
+}
+
+/* line 13, ../../../app/stylesheets/colorbox.scss */
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 14, ../../../app/stylesheets/colorbox.scss */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+
+/* 
+    ColorBox example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+/* line 21, ../../../app/stylesheets/colorbox.scss */
+#cboxOverlay {
+  background: #fff;
+}
+
+/* line 24, ../../../app/stylesheets/colorbox.scss */
+#cboxTopLeft {
+  width: 25px;
+  height: 25px;
+  background: url('/images/colorbox/border1.png?1295305709') no-repeat 0 0;
+}
+
+/* line 25, ../../../app/stylesheets/colorbox.scss */
+#cboxTopCenter {
+  height: 25px;
+  background: url('/images/colorbox/border1.png?1295305709') repeat-x 0 -50px;
+}
+
+/* line 26, ../../../app/stylesheets/colorbox.scss */
+#cboxTopRight {
+  width: 25px;
+  height: 25px;
+  background: url('/images/colorbox/border1.png?1295305709') no-repeat -25px 0;
+}
+
+/* line 27, ../../../app/stylesheets/colorbox.scss */
+#cboxBottomLeft {
+  width: 25px;
+  height: 25px;
+  background: url('/images/colorbox/border1.png?1295305709') no-repeat 0 -25px;
+}
+
+/* line 28, ../../../app/stylesheets/colorbox.scss */
+#cboxBottomCenter {
+  height: 25px;
+  background: url('/images/colorbox/border1.png?1295305709') repeat-x 0 -75px;
+}
+
+/* line 29, ../../../app/stylesheets/colorbox.scss */
+#cboxBottomRight {
+  width: 25px;
+  height: 25px;
+  background: url('/images/colorbox/border1.png?1295305709') no-repeat -25px -25px;
+}
+
+/* line 30, ../../../app/stylesheets/colorbox.scss */
+#cboxMiddleLeft {
+  width: 25px;
+  background: url('/images/colorbox/border2.png?1295305709') repeat-y 0 0;
+}
+
+/* line 31, ../../../app/stylesheets/colorbox.scss */
+#cboxMiddleRight {
+  width: 25px;
+  background: url('/images/colorbox/border2.png?1295305709') repeat-y -25px 0;
+}
+
+/* line 32, ../../../app/stylesheets/colorbox.scss */
+#cboxContent {
+  background: #fff;
+}
+
+/* line 33, ../../../app/stylesheets/colorbox.scss */
+#cboxLoadedContent {
+  margin-bottom: 20px;
+}
+
+/* line 34, ../../../app/stylesheets/colorbox.scss */
+#cboxTitle {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #999;
+}
+
+/* line 35, ../../../app/stylesheets/colorbox.scss */
+#cboxCurrent {
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
+  color: #999;
+}
+
+/* line 36, ../../../app/stylesheets/colorbox.scss */
+#cboxSlideshow {
+  position: absolute;
+  bottom: 0px;
+  right: 42px;
+  color: #444;
+}
+
+/* line 37, ../../../app/stylesheets/colorbox.scss */
+#cboxPrevious {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  color: #444;
+}
+
+/* line 38, ../../../app/stylesheets/colorbox.scss */
+#cboxNext {
+  position: absolute;
+  bottom: 0px;
+  left: 63px;
+  color: #444;
+}
+
+/* line 39, ../../../app/stylesheets/colorbox.scss */
+#cboxLoadingOverlay {
+  background: white url('/images/colorbox/loading.gif?1295305709') no-repeat 5px 5px;
+}
+
+/* line 40, ../../../app/stylesheets/colorbox.scss */
+#cboxClose {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  color: #444;
+}
+
+/*
+    The following fixes png-transparency for IE6.  
+    It is also necessary for png-transparency in IE7 & IE8 to avoid 'black halos' with the fade transition
+    
+    Since this method does not support CSS background-positioning, it is incompatible with CSS sprites.
+    Colorbox preloads navigation hover classes to account for this.
+    
+    !! Important Note: AlphaImageLoader src paths are relative to the HTML document,
+    while regular CSS background images are relative to the CSS document.
+*/
+/* line 52, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxTopLeft {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderTopLeft.png, sizingMethod='scale');
+}
+
+/* line 53, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxTopCenter {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderTopCenter.png, sizingMethod='scale');
+}
+
+/* line 54, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxTopRight {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderTopRight.png, sizingMethod='scale');
+}
+
+/* line 55, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxBottomLeft {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderBottomLeft.png, sizingMethod='scale');
+}
+
+/* line 56, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxBottomCenter {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderBottomCenter.png, sizingMethod='scale');
+}
+
+/* line 57, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxBottomRight {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderBottomRight.png, sizingMethod='scale');
+}
+
+/* line 58, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxMiddleLeft {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');
+}
+
+/* line 59, ../../../app/stylesheets/colorbox.scss */
+.cboxIE #cboxMiddleRight {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderMiddleRight.png, sizingMethod='scale');
+}

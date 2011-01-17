@@ -1,29 +1,40 @@
-.box-style3
-  .title
-    %h2
-      = link_to 'Home', :root
-      > Alle boten
-  .content
-    %h3.style1 Alle boten
-    %p
-      Boot Huren Amsterdam brengt het volledige boten aanbod van alle 
-      rederijen in Amsterdam in kaart en biedt u de mogelijkheid te 
-      vergelijken en de boot te kiezen die het beste aansluit op uw wensen. 
-      Kijk, vergelijk en boek met laagste prijsgarantie en zonder 
-      reserveringskosten.
-      
-.box-style3#boat_list
-  .title
-    Sorteer op: 
-  .content
-    %ul.list3
-      - @boats.each do |boat|
-        %li.first
-          = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), boat_path(boat.url)
-          %p 
-            =link_to boat.display_name, boat_path(boat.url)
-            (85 reacties)
-          %p
-            =truncate boat.description, :separator => ' ', :length => 235
-          %p
-            =link_to 'Meer informatie', boat_path(boat.url)
+#page.container.two-columns
+  .column1
+    .box-style1
+      %h2 Alle huurboten op een rij
+      %ul
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+  .column2
+    .box-style3
+      .title
+        %h2
+          = link_to 'Home', :root
+          > Alle boten
+      .content
+        %h3.style1 Alle boten
+        %p
+          Boot Huren Amsterdam brengt het volledige boten aanbod van alle 
+          rederijen in Amsterdam in kaart en biedt u de mogelijkheid te 
+          vergelijken en de boot te kiezen die het beste aansluit op uw wensen. 
+          Kijk, vergelijk en boek met laagste prijsgarantie en zonder 
+          reserveringskosten.
+    
+    .box-style3#boat_list
+      .title
+        Sorteer op: 
+      .content
+        %ul.list3
+          - @boats.each do |boat|
+            %li
+              = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), boat_path(boat.url)
+              %p 
+                =link_to boat.display_name, boat_path(boat.url)
+                (85 reacties)
+              %p
+                =truncate boat.description, :separator => ' ', :length => 235
+              %p
+                =link_to 'Meer informatie', boat_path(boat.url)

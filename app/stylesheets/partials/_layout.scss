@@ -160,11 +160,26 @@ p, ol, ul {
   width: 200px;
 }
 
-#details .column {
-  width: 30%;
-  float: left;
-  margin-left: 5%;
-  &:first-child {
-    margin-left: 0;
+#details, #facilities {
+  @include clearfix;
+  .column {
+    width: 30%;
+    float: left;
+    margin-left: 5%;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+#reviews {
+  .grade {
+    float: left;
+    border: 1px solid #DEDEDE;
+    height: 50px;
+    margin: 0 10px 10px 0;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
   }
 }

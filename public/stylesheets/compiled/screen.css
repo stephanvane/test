@@ -660,7 +660,7 @@ p, ol, ul {
   padding-top: 100px;
   text-align: center;
   text-decoration: none;
-  background-image: url('/images/aanvragen.jpg?1295219159');
+  background-image: url('/images/aanvragen.jpg?1295227813');
 }
 /* line 148, ../../../app/stylesheets/partials/_layout.scss */
 #order a:hover {
@@ -678,14 +678,30 @@ p, ol, ul {
 }
 
 /* line 163, ../../../app/stylesheets/partials/_layout.scss */
-#details .column {
+#details, #facilities {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 165, ../../../app/stylesheets/partials/_layout.scss */
+#details .column, #facilities .column {
   width: 30%;
   float: left;
   margin-left: 5%;
 }
-/* line 167, ../../../app/stylesheets/partials/_layout.scss */
-#details .column:first-child {
+/* line 169, ../../../app/stylesheets/partials/_layout.scss */
+#details .column:first-child, #facilities .column:first-child {
   margin-left: 0;
+}
+
+/* line 176, ../../../app/stylesheets/partials/_layout.scss */
+#reviews .grade {
+  float: left;
+  border: 1px solid #DEDEDE;
+  height: 50px;
+  margin: 0 10px 10px 0;
+  width: 70px;
+  padding: 10px;
+  text-align: center;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_text.scss */
@@ -694,32 +710,37 @@ h1, h2, h3 {
 }
 
 /* line 5, ../../../app/stylesheets/partials/_text.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 9, ../../../app/stylesheets/partials/_text.scss */
 h3 {
   margin-bottom: 10px;
   font-size: 11px;
   color: #005876;
 }
 
-/* line 11, ../../../app/stylesheets/partials/_text.scss */
+/* line 15, ../../../app/stylesheets/partials/_text.scss */
 h3.style1 {
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-/* line 16, ../../../app/stylesheets/partials/_text.scss */
+/* line 20, ../../../app/stylesheets/partials/_text.scss */
 .more {
   height: 22px;
   padding: 8px 0px 0px 15px;
   background: url('/images/homepage10.gif?1294797413') repeat-x left top;
 }
-/* line 20, ../../../app/stylesheets/partials/_text.scss */
+/* line 24, ../../../app/stylesheets/partials/_text.scss */
 .more a {
   padding-left: 17px;
   background: url('/images/homepage11.gif?1294797413') no-repeat left center;
   color: #56636F;
 }
 
-/* line 27, ../../../app/stylesheets/partials/_text.scss */
+/* line 31, ../../../app/stylesheets/partials/_text.scss */
 a:hover {
   text-decoration: none;
 }

@@ -1,57 +1,152 @@
-.box-style3
-  .title
-    %h2
-      = link_to 'Home', :root
-      >
-      = link_to 'Alle boten', :boats
-      >
-      = link_to @boat.boat_type, ''
-      >
-      = @boat.name.capitalize
-  .content
-    %h3.style1= @boat.display_name
-    %div
-      = image_tag'http://www.boothurenamsterdam.com/nieuw/media/boat/banners/hrh-banner_.jpg', :class => 'border'
-      #order.border
-        %a{ :href => '' } Aanvragen
-      #review_block
-        asdfasdf
-      %p= @boat.description
+#page.container.two-columns
+  -# Menu
+  .column1
+    .box-style1
+      %h2 Alle huurboten op een rij
+      %ul
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
 
-#details.box-style3
-  .title
-    %h2 Details
-  .content.clearfix
-    .column
-      %h3 Maximaal aantal personen
-      %table
-        %tr
-          %th Bij borrel
-          %td 395 euro
-        %tr
-          %th Bij buffet
-          %td 395 euro
-        %tr
-          %th bij zittend diner
-          %td 395 euro
-    .column
-      %h3 Prijs (incl btw)
-      %table
-        %tr
-          %th Eerste uur
-          %td 395 euro
-        %tr
-          %th Tweede uur
-          %td 395 euro
-        %tr
-          %th Volgende uren
-          %td 395 euro
-    .column
-      %h3 Specificaties
-      %table
-        %tr
-          %th Minimum aantal uren
-          %td 2
-        %tr
-          %th Gastvrouw
-          %td= bool_to_image @boat.hostess
+  -# Content
+  .column2
+    .box-style3
+      .title
+        %h2
+          = link_to 'Home', :root
+          >
+          = link_to 'Alle boten', :boats
+          >
+          = link_to @boat.boat_type, ''
+          >
+          = @boat.name.capitalize
+      .content
+        %h3.style1= @boat.display_name
+        %div
+          = image_tag'http://www.boothurenamsterdam.com/nieuw/media/boat/banners/hrh-banner_.jpg', :class => 'border'
+          #order.border
+            %a{ :href => '' } Aanvragen
+          #review_block
+            asdfasdf
+          %p= @boat.description
+
+    -# Details
+    #details.box-style3
+      .title
+        %h2 Details
+      .content.clearfix
+        .column
+          %h3 Maximaal aantal personen
+          %table
+            %tr
+              %th Bij borrel
+              %td 395 euro
+            %tr
+              %th Bij buffet
+              %td 395 euro
+            %tr
+              %th bij zittend diner
+              %td 395 euro
+        .column
+          %h3 Prijs (incl btw)
+          %table
+            %tr
+              %th Eerste uur
+              %td 395 euro
+            %tr
+              %th Tweede uur
+              %td 395 euro
+            %tr
+              %th Volgende uren
+              %td 395 euro
+        .column
+          %h3 Specificaties
+          %table
+            %tr
+              %th Minimum aantal uren
+              %td 2
+            %tr
+              %th Gastvrouw
+              %td= bool_to_image @boat.hostess
+    -# Facilities
+    #facilities.box-style3
+      .title
+        %h2 Faciliteiten
+      .content
+        .column
+          %table
+            %tr
+              %th Toilet
+              %td= bool_to_image @boat.toilet
+            %tr
+              %th Bar
+              %td= bool_to_image @boat.bar
+            %tr
+              %th Verwarming
+              %td= bool_to_image @boat.heating
+        .column
+          %table
+            %tr
+              %th Geluidsinstallatie
+              %td= bool_to_image @boat.music
+            %tr
+              %th 220 volt stopcontact(en)
+              %td= bool_to_image @boat.power
+            %tr
+              %th Rolstoelvriendelijk
+              %td= bool_to_image @boat.wheelchair
+        .column
+          %table
+            %tr
+              %th Millieuvriendelijk
+              %td= bool_to_image @boat.environment
+            %tr
+              %th Te openen ramen
+              %td= bool_to_image @boat.windows
+            %tr
+              %th Buiten (balkon)
+              %td= bool_to_image @boat.balcony
+    #reviews.box-style3
+      .title
+        %h2 Beoordelingen
+      .content
+        %ul.list3
+          %li 
+            .grade
+              %h1 6
+              22-Okt-2010
+            %p
+              Volgens mij is deze boot geschikt voor 40 personen. Wij waren
+              met 14 personen en vonden het net aan. We konden niet eens
+              allemaal zitten. Absoluut niet geschikt voor 40 personen, ook
+              niet met mooi weer want dan wil iedereen buiten staan en dat
+              past ook niet. Verder was het verspringen van de gekleurde
+              verlichting een beetje hinderlijk. Schipper en gastvrouw waren
+              super!
+            %p Gloria Gomez
+          %li
+            .grade
+              %h1 9
+              27-Sep-2010
+            %p
+              Boot was perfect op tijd bij opstapplaats en in overleg weer
+              prima op tijd afgezet bij huwelijkslocatie. Vriendelijk
+              personeel, heel mooie boot. Mvg, Pieter Mertens
+            %p Mertens Pieter
+    - if @boat.similar_boats.any?
+      .box-style3
+        .title
+          %h2= "Boten die lijken op #{@boat.display_name}"
+        .content
+          - @boat.similar_boats do |boat|
+            %li
+              = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), boat_path(boat.url)
+              %p 
+                =link_to boat.display_name, boat_path(boat.url)
+                (85 reacties)
+              %p
+                =truncate boat.description, :separator => ' ', :length => 235
+              %p
+                =link_to 'Meer informatie', boat_path(boat.url)
