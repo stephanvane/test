@@ -638,9 +638,54 @@ p, ol, ul {
 }
 
 /* line 127, ../../../app/stylesheets/partials/_layout.scss */
-img.border {
+.border {
   padding: 3px;
   border: 1px solid #CBD0D4;
+}
+
+/* line 132, ../../../app/stylesheets/partials/_layout.scss */
+#order {
+  float: right;
+  height: 181px;
+  width: 119px;
+}
+/* line 137, ../../../app/stylesheets/partials/_layout.scss */
+#order a {
+  color: #ccc;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  height: 81px;
+  width: 119px;
+  padding-top: 100px;
+  text-align: center;
+  text-decoration: none;
+  background-image: url('/images/aanvragen.jpg?1295219159');
+}
+/* line 148, ../../../app/stylesheets/partials/_layout.scss */
+#order a:hover {
+  color: #0090BA;
+}
+
+/* line 154, ../../../app/stylesheets/partials/_layout.scss */
+#review_block {
+  background-color: #FFF5DB;
+  border: 2px dotted #DEDEDE;
+  float: right;
+  margin: 6px 0px 10px 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+/* line 163, ../../../app/stylesheets/partials/_layout.scss */
+#details .column {
+  width: 30%;
+  float: left;
+  margin-left: 5%;
+}
+/* line 167, ../../../app/stylesheets/partials/_layout.scss */
+#details .column:first-child {
+  margin-left: 0;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_text.scss */

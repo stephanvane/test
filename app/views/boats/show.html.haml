@@ -1,0 +1,57 @@
+.box-style3
+  .title
+    %h2
+      = link_to 'Home', :root
+      >
+      = link_to 'Alle boten', :boats
+      >
+      = link_to @boat.boat_type, ''
+      >
+      = @boat.name.capitalize
+  .content
+    %h3.style1= @boat.display_name
+    %div
+      = image_tag'http://www.boothurenamsterdam.com/nieuw/media/boat/banners/hrh-banner_.jpg', :class => 'border'
+      #order.border
+        %a{ :href => '' } Aanvragen
+      #review_block
+        asdfasdf
+      %p= @boat.description
+
+#details.box-style3
+  .title
+    %h2 Details
+  .content.clearfix
+    .column
+      %h3 Maximaal aantal personen
+      %table
+        %tr
+          %th Bij borrel
+          %td 395 euro
+        %tr
+          %th Bij buffet
+          %td 395 euro
+        %tr
+          %th bij zittend diner
+          %td 395 euro
+    .column
+      %h3 Prijs (incl btw)
+      %table
+        %tr
+          %th Eerste uur
+          %td 395 euro
+        %tr
+          %th Tweede uur
+          %td 395 euro
+        %tr
+          %th Volgende uren
+          %td 395 euro
+    .column
+      %h3 Specificaties
+      %table
+        %tr
+          %th Minimum aantal uren
+          %td 2
+        %tr
+          %th Gastvrouw
+          %td= bool_to_image @boat.hostess

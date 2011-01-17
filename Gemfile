@@ -19,8 +19,10 @@ gem 'jquery-rails'
 # Test gems
 group :test do
   gem 'shoulda'
+  gem 'factory_girl_rails'
 end
 gem 'rspec'
 gem 'rspec-rails'
 gem 'autotest'
 gem 'autotest-rails-pure'
+gem 'autotest-growl'
