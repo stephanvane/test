@@ -1,11 +1,12 @@
 Bha::Application.routes.draw do
+  root :to => 'boats#index'
+  
   # Static pages
   get 'married' => 'pages#married'
   
+  
   get 'boats' => 'boats#index'
   get ':url'  => 'boats#show', :as => 'boat'
-  
-  root :to => 'boats#index'
   # >The prior ity is based upon order of creation:
   # first created -> highest priority.
 
