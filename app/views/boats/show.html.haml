@@ -27,7 +27,7 @@
         %div
           = image_tag'http://www.boothurenamsterdam.com/nieuw/media/boat/banners/hrh-banner_.jpg', :class => 'border'
           #order.border
-            %a{ :href => '' } Aanvragen
+            = link_to 'Aanvragen', new_request_path(), :remote => true
           #review_block
             asdfasdf
           %p= @boat.description
@@ -42,25 +42,25 @@
           %table
             %tr
               %th Bij borrel
-              %td 395 euro
+              %td= @boat.max_persons
             %tr
               %th Bij buffet
-              %td 395 euro
+              %td= @boat.max_persons_buffet
             %tr
               %th bij zittend diner
-              %td 395 euro
+              %td= @boat.max_persons_dinner
         .column
           %h3 Prijs (incl btw)
           %table
             %tr
               %th Eerste uur
-              %td 395 euro
+              %td= "#{@boat.price1} euro"
             %tr
               %th Tweede uur
-              %td 395 euro
+              %td= "#{@boat.price2} euro"
             %tr
               %th Volgende uren
-              %td 395 euro
+              %td= "#{@boat.price3} euro"
         .column
           %h3 Specificaties
           %table

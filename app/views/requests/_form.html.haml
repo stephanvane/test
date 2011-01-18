@@ -1,0 +1,25 @@
+= form_for @request, :html => { :id => 'request_form' } do |f|
+  %p
+    =f.label :persons
+    =f.text_field :persons
+  %p
+    =f.label :start
+    =f.text_field :start
+  %p
+    =f.label :end
+    =f.text_field :end
+  %p
+    =f.label :first_name
+    =f.text_field :first_name
+  %p
+    =f.label :last_name
+    =f.text_field :last_name
+  %p
+    =f.label :email
+    =f.text_field :email
+  %p
+    =f.label :phone
+    =f.text_field :phone
+  %p
+    =f.label :message
+    =f.text_area :message

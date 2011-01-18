@@ -4,9 +4,10 @@ Bha::Application.routes.draw do
   # Static pages
   get 'married' => 'pages#married'
   
-  
   get 'boats' => 'boats#index'
   get ':url'  => 'boats#show', :as => 'boat'
+  get ':url/request' => 'requests#new', :as => 'new_request'
+  post 'requests' => 'request#create', :as => 'requests'
   # >The prior ity is based upon order of creation:
   # first created -> highest priority.
 
