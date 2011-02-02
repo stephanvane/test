@@ -26,3 +26,5 @@ gem 'rspec-rails'
 gem 'autotest'
 gem 'autotest-rails-pure'
 gem 'autotest-growl'
+
+gem 'mysql2'
