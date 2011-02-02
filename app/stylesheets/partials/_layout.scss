@@ -113,15 +113,13 @@ body {
   }
 }
 
-form {
-  @include blueprint-form;
-}
-
-p, ol, ul {
-	margin-top: 0px;
-	margin-bottom: 18px;
-	text-align: justify;
-	line-height: 17px;
+.content {
+  p, ol, ul {
+  	margin-top: 0px;
+  	margin-bottom: 18px;
+  	text-align: justify;
+  	line-height: 17px;
+  }
 }
 
 .border {

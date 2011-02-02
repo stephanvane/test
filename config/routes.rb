@@ -7,7 +7,7 @@ Bha::Application.routes.draw do
   get 'boats' => 'boats#index'
   get ':url'  => 'boats#show', :as => 'boat'
   get ':url/request' => 'requests#new', :as => 'new_request'
-  post 'requests' => 'request#create', :as => 'requests'
+  post ':url/request' => 'requests#create', :as => 'requests'
   # >The prior ity is based upon order of creation:
   # first created -> highest priority.
 
