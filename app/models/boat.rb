@@ -37,6 +37,8 @@ class Boat < ActiveRecord::Base
     :association_foreign_key => "similar_boat_id",
     :join_table => "similar_boats"
   belongs_to :boat_company
+  has_many :photos, :as => :item, :dependent => :destroy  
+  accepts_nested_attributes_for :photos
   
   # Translations
   translates :boat_type, :url, :description

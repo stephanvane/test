@@ -9,19 +9,18 @@
         %li asdf
         %li asdf
         %li asdf
+    .box-style1
+      %h2 Admin
+      %ul
+        %li= link_to 'Edit boat', edit_boat_path(@boat)
 
   -# Content
   .column2
     .box-style3
       .title
-        %h2
-          = link_to 'Home', :root
-          >
-          = link_to 'Alle boten', :boats
-          >
-          = link_to @boat.boat_type, ''
-          >
-          = @boat.name.capitalize
+        %h2 
+          #{link_to 'Home', :root} > #{link_to 'Alle boten', :boats} >
+          #{link_to @boat.boat_type, ''} > #{@boat.name.capitalize}
       .content
         %h3.style1= @boat.display_name
         %div
@@ -31,6 +30,16 @@
           #review_block
             asdfasdf
           %p= @boat.description
+          
+    -# Photo's
+    - if @boat.photos.any?
+      .box-style3
+        .title
+          %h2= "Pictures of #{@boat.display_name}"
+        .content.clearfix
+          - @boat.photos.each do |p|
+            = image_tag p.photo(:small)
+        
 
     -# Details
     #details.box-style3

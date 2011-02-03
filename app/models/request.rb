@@ -31,5 +31,8 @@
 class Request < ActiveRecord::Base
   belongs_to :requested, :polymorphic => true
   
-  validates_presence_of :persons
+  validates_numericality_of :persons, :only_integer => true
+  validates_presence_of :first_name, :last_name, :email, :phone
+  validates_time :start
+  validates_time :end, :after => :start
 end

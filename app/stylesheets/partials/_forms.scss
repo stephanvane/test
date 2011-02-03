@@ -1,0 +1,64 @@
+form {
+  .field_with_errors {
+    color: #8A1F11;
+  }
+  
+  // Boat form
+  &.edit_boat {
+    @include blueprint-form-sizes(120px, 906px, 130px);
+    @include blueprint-form-layout;
+    @include blueprint-form-borders;
+    
+    .column {
+      &:first-child {
+        margin-left: 0;
+      }
+      width: 150px;
+      margin-left: 10px;
+      float:left;
+    }
+    
+    .row {
+      @include clearfix;
+    }
+
+    label {
+      width: 120px;
+    }
+    input.title {
+      background: none;
+    }
+    input[type=checkbox] {
+      margin-right: 20px;
+    }
+  }
+  
+  // Request form
+  &.new_request {
+    @include blueprint-form-sizes(120px, 376px, 130px);
+    @include blueprint-form-layout;
+    @include blueprint-form-borders;
+    @include blueprint-inline-form;
+    
+    .field_with_errors {
+      color: #8A1F11;
+    }
+    
+    label {
+      float: left;
+      width: 70px;
+      margin-right: 10px;
+    }
+
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+
+    .bottom {
+      clear: both;
+    }   
+  }
+}

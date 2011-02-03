@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110118085537) do
+ActiveRecord::Schema.define(:version => 20110202122424) do
 
   create_table "boat_companies", :force => true do |t|
     t.string   "name"
@@ -59,6 +59,15 @@ ActiveRecord::Schema.define(:version => 20110118085537) do
     t.boolean  "balcony"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "photos", :force => true do |t|
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.integer  "item_id"
+    t.string   "item_type"
   end
 
   create_table "requests", :force => true do |t|
