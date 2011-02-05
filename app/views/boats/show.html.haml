@@ -1,4 +1,4 @@
-#page.container.two-columns
+.two-columns
   -# Menu
   .column1
     .box-style1
@@ -9,6 +9,7 @@
         %li asdf
         %li asdf
         %li asdf
+    //- if can? :edit, @boat
     .box-style1
       %h2 Admin
       %ul
@@ -38,8 +39,7 @@
           %h2= "Pictures of #{@boat.display_name}"
         .content.clearfix
           - @boat.photos.each do |p|
-            = image_tag p.photo(:small)
-        
+            = image_tag p.photo(:small)        
 
     -# Details
     #details.box-style3

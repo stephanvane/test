@@ -19,6 +19,10 @@ gem 'jquery-rails'
 gem 'validates_timeliness'
 gem 'paperclip'
 
+# Authentication
+gem 'devise'
+gem 'cancan'
+
 # Test gems
 group :test do
   gem 'shoulda'

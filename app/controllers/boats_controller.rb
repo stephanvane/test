@@ -9,6 +9,7 @@ class BoatsController < ApplicationController
   
   def edit
     @boat = Boat.find(params[:id])
+    authorize! :edit, @boat
   end
   
   def update

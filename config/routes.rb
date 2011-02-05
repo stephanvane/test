@@ -1,4 +1,6 @@
 Bha::Application.routes.draw do
+  devise_for :admins
+
   root :to => 'boats#index'
   
   # Static pages
@@ -14,6 +16,8 @@ Bha::Application.routes.draw do
   get ':url/request' => 'requests#new', :as => 'new_request'
   post ':url/request' => 'requests#create', :as => 'requests'
   
+  # users
+  devise_for :admins
   
   # >The prior ity is based upon order of creation:
   # first created -> highest priority.
