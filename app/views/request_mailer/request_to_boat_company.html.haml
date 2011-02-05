@@ -1,0 +1,17 @@
+%p
+  Beste 
+  %strong= @request.requested.boat_company.name
+  
+%p Zojuist ontvingen wij de navolgende aanvraag:
+
+%ul
+  %li Referentie: #{@request.id}
+  %li Boot: #{@request.requested.name}
+  %li 
+    Datum: #{@request.date}
+  %li
+    Start tijd: #{@request.start}
+  %li
+    Eind tijd: #{@request.end}
+  %li
+    Personen: #{@request.persons}

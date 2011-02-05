@@ -14,5 +14,5 @@
 #
 
 class BoatCompany < ActiveRecord::Base
-  validates_presence_of :name, :secret
+  validates_presence_of :name, :email, :secret
 end

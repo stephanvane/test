@@ -1,0 +1,10 @@
+Beste <%= @request.requested.boat_company.name %>
+
+Zojuist ontvingen wij de navolgende aanvraag:
+
+Referentie: <%= @request.id %>
+Boot: <%= @request.requested.name %>
+Datum: <%= @request.date %>
+Start tijd: <%= @request.start %>
+Eind tijd: <%= @request.end %>
+Personen: <%= @request.persons %>

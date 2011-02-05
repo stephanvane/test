@@ -19,6 +19,11 @@ Bha::Application.configure do
   
   # Set default host for mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  # Smtp settings
+  config.action_mailer.smtp_settings = {
+    :port => 1025 # mailcatchers port
+  }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

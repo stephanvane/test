@@ -6,7 +6,12 @@ class RequestsController < ApplicationController
   
   def create
     @request = Request.new(params[:request])
+    
+    boat = Boat.find_first_by_url(params[:url])
+    @request.requested = boat
+    
     if @request.save
+      RequestMailer.request_to_boat_company(@request).deliver!
     else
       render :new
     end
