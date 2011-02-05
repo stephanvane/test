@@ -6,32 +6,32 @@
 
 = form_for @request, :remote => true, :html => { :id => 'request_form' } do |f|
   .left
-    %p
+    .row
       =f.label :persons
       =f.text_field :persons
-    %p
+    .row
       =f.label :start
       =f.text_field :start
-    %p
+    .row
       =f.label :end
       =f.text_field :end
-    %p
+    .row
       =f.label :first_name
       =f.text_field :first_name
-    %p
+    .row
       =f.label :last_name
       =f.text_field :last_name
-    %p
+    .row
       =f.label :email
       =f.text_field :email
-    %p
+    .row
       =f.label :phone
       =f.text_field :phone
   .right
     right text
   .bottom
-    %p
+    .row
       =f.label :message
       =f.text_area :message
-    %p
+    .row
       =f.submit :send

@@ -1072,12 +1072,13 @@ form.new_request label {
 /* line 53, ../../../app/stylesheets/partials/_forms.scss */
 form.new_request .left {
   float: left;
+  width: 220px;
 }
-/* line 56, ../../../app/stylesheets/partials/_forms.scss */
+/* line 57, ../../../app/stylesheets/partials/_forms.scss */
 form.new_request .right {
   float: right;
 }
-/* line 60, ../../../app/stylesheets/partials/_forms.scss */
+/* line 61, ../../../app/stylesheets/partials/_forms.scss */
 form.new_request .bottom {
   clear: both;
 }
