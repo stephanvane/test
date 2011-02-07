@@ -27,7 +27,13 @@
             =f.check_box :active
       %fieldset
         .row
-          =file_field_tag 'boat[photos_attributes][][photo]', :multiple => true
+          .column
+            = f.label :banner
+            = f.file_field :banner
+        .row
+          .column
+            = f.label :photos
+            = file_field_tag 'boat[photos_attributes][][photo]', :multiple => true
       %fieldset
         .row
           .column

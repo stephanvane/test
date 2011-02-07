@@ -7,6 +7,9 @@
 = form_for @request, :remote => true, :html => { :id => 'request_form' } do |f|
   .left
     .row
+      =f.label :date
+      =f.text_field :date
+    .row
       =f.label :persons
       =f.text_field :persons
     .row

@@ -11,9 +11,7 @@
   .column2
     .box-style3
       .title
-        %h2
-          = link_to 'Home', :root
-          > Alle boten
+        %h2 #{link_to 'Home', :root} > Alle boten
       .content
         %h3.style1 Alle boten
         %p
@@ -30,7 +28,7 @@
         %ul.list3
           - @boats.each do |boat|
             %li
-              = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), boat_path(boat.url)
+              = link_to image_tag(boat.banner.url(:thumbnail)), boat_path(boat.url)
               %p 
                 =link_to boat.display_name, boat_path(boat.url)
                 (85 reacties)

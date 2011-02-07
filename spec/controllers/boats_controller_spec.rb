@@ -5,7 +5,7 @@ describe BoatsController do
     it "should be successful" do
       get 'index', :locale => 'en'
       response.should be_success
-      should assign_to :boats
+      assigns(:boats)
     end
   end
   

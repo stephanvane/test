@@ -683,6 +683,11 @@ a:hover {
   text-decoration: none;
 }
 
+/* line 35, ../../../app/stylesheets/partials/_text.scss */
+thead th {
+  background: inherit;
+}
+
 /* line 1, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style1 {
   margin-bottom: 10px;

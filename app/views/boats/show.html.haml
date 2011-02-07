@@ -25,7 +25,7 @@
       .content
         %h3.style1= @boat.display_name
         %div
-          = image_tag'http://www.boothurenamsterdam.com/nieuw/media/boat/banners/hrh-banner_.jpg', :class => 'border'
+          = image_tag @boat.banner.url(:normal), :class => 'border'
           #order.border
             = link_to 'Aanvragen', new_request_path(), :remote => true
           #review_block

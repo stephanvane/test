@@ -33,6 +33,7 @@ class Request < ActiveRecord::Base
   
   validates_numericality_of :persons, :only_integer => true
   validates_presence_of :first_name, :last_name, :email, :phone
+  validates_date :date
   validates_time :start
   validates_time :end, :after => :start
 end
