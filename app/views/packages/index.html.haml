@@ -1,0 +1,36 @@
+.two-columns
+  .column1
+    .box-style1
+      %h2 All packages
+      %ul
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+  .column2
+    .box-style3
+      .title
+        %h2 #{link_to 'Home', :root} > Packages
+      .content
+        %h3.style1 Packages
+        %p
+          Funny, luxury or fair priced sailing packages at Rent A Boat
+          Amsterdam. We have the boating package you are looking for. Have a
+          look at the following selection of packages. Can't find the
+          canalcruise that you are looking for? Please contact us and enquiry
+          about the possibilities that we provide.
+    .box-style3#boat_list
+      .title
+        %strong page 1 of 2
+      .content
+        %ul.list3
+          - @packages.each do |package|
+            %li
+              = link_to image_tag(package.banner.url(:thumbnail)), package_path(package.name)
+              %p 
+                =link_to package.name, package_path(package.name)
+              %p
+                =truncate package.description, :separator => ' ', :length => 235
+              %p
+                =link_to 'Meer informatie', package_path(package.name)

@@ -23,12 +23,10 @@ gem 'paperclip'
 gem 'devise'
 gem 'cancan'
 
+gem 'rspec-rails'
+
 # Test gems
 group :test do
-  # gem 'autotest'
-  # gem 'autotest-rails-pure'
-  # gem 'autotest-growl'
-  gem 'rspec-rails'
   gem 'shoulda'
   gem 'factory_girl_rails'
 end

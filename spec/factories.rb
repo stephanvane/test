@@ -1,3 +1,4 @@
+# encoding: utf-8
 Factory.define :boat do |b|
   b.name 'ondine'
   b.boat_type 'canal-boat'
@@ -10,6 +11,7 @@ Factory.define :boat do |b|
   b.max_persons_buffet 20
   b.max_persons_dinner 10
   b.min_hours 2
+  b.banner_file_name 'ondine.jpg'
   b.association :boat_company
 end
 
@@ -30,4 +32,14 @@ Factory.define :boat_company do |bc|
   bc.email 'info@amsterdamboats.com'
   bc.phone '0612341234'
   bc.secret '12345'
+end
+
+Factory.define :package do |p|
+  p.name 'Glühwein cruise'
+  p.description 'Specially during the cold winter we offer you a Glühwein cruise through the beautiful winter setting of Amsterdam. During a 1,5 hour cruise on one of our classical boats we serve you this typical German drink Glühwein with a bite. Book this warm and delicious Glühwein cruise!'
+  p.min_persons 10
+  p.max_persons 40
+  p.duration 1.5
+  p.price 42.50
+  p.banner_file_name 'Glühwein cruise.jpg'
 end

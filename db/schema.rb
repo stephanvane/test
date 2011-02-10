@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110205183230) do
+ActiveRecord::Schema.define(:version => 20110208001433) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                              :default => "", :null => false
@@ -80,6 +80,40 @@ ActiveRecord::Schema.define(:version => 20110205183230) do
     t.string   "banner_content_type"
     t.integer  "banner_file_size"
     t.datetime "banner_updated_at"
+  end
+
+  create_table "boats_packages", :id => false, :force => true do |t|
+    t.integer "boat_id"
+    t.integer "package_id"
+  end
+
+  create_table "package_translations", :force => true do |t|
+    t.integer  "package_id"
+    t.string   "locale"
+    t.string   "name"
+    t.text     "description"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "package_translations", ["package_id"], :name => "index_package_translations_on_package_id"
+
+  create_table "packages", :force => true do |t|
+    t.integer  "min_persons"
+    t.integer  "max_persons"
+    t.float    "duration"
+    t.decimal  "price"
+    t.string   "boarding_area"
+    t.boolean  "active",              :default => true
+    t.decimal  "discount_price"
+    t.integer  "order",               :default => 50
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "photos", :force => true do |t|

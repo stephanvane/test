@@ -4,7 +4,7 @@ form {
   }
   
   // Boat form
-  &.edit_boat {
+  &.edit_boat, &.new_package, &.edit_package {
     @include blueprint-form-sizes(120px, 906px, 130px);
     @include blueprint-form-layout;
     @include blueprint-form-borders;

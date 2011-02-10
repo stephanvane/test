@@ -1,0 +1,80 @@
+.two-columns
+  -# Menu
+  .column1
+    .box-style1
+      %h2 All packages
+      %ul
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+        %li asdf
+
+  -# Content
+  .column2
+    .box-style3
+      .title
+        %h2 
+          #{link_to 'Home', :root} > #{link_to 'All packages', :packages} >
+          #{@package.name.capitalize}
+      .content
+        %h3.style1= @package.name.capitalize
+        %div
+          = image_tag @package.banner.url(:normal), :class => 'border'
+          #order.border
+            = link_to 'Aanvragen', new_request_path('url'), :remote => true
+          #review_block
+            asdfasdf
+          %p= @package.description
+          
+    -# Photo's
+    - if @package.photos.any?
+      .box-style3
+        .title
+          %h2= "Pictures of #{@package.display_name}"
+        .content.clearfix
+          - @package.photos.each do |p|
+            = image_tag p.photo(:small)        
+
+    -# Details
+    #details.box-style3
+      .title
+        %h2 Details
+      .content.clearfix
+        .column
+          %table
+            %tr
+              %th Minimum number of people
+              %td= @package.min_persons
+            %tr
+              %th Maximum number of people
+              %td= @package.max_persons
+        .column
+          %table
+            %tr
+              %th Duration
+              %td= "#{@package.duration} uur"
+            %tr
+              %th Price per person
+              %td= "#{@package.price} euro"
+        .column
+          %table
+            %tr
+              %th Including boatrental
+              %td 2
+    -# Available boats
+    - if @package.boats.any?
+      .box-style3
+        .title
+          %h2= "Package is available on the following boats"
+        .content
+          - @package.boats do |boat|
+            %li
+              = link_to image_tag('http://www.boothurenamsterdam.com/nieuw/media/boat/thumbnails/zelfstandig-sloep.jpg'), boat_path(boat.url)
+              %p 
+                =link_to boat.display_name, boat_path(boat.url)
+                (85 reacties)
+              %p
+                =truncate boat.description, :separator => ' ', :length => 235
+              %p
+                =link_to 'Meer informatie', boat_path(boat.url)

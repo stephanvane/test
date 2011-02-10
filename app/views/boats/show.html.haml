@@ -9,11 +9,12 @@
         %li asdf
         %li asdf
         %li asdf
-    //- if can? :edit, @boat
-    .box-style1
-      %h2 Admin
-      %ul
-        %li= link_to 'Edit boat', edit_boat_path(@boat)
+    - if can? :edit, @boat
+      .box-style1
+        %h2 Admin
+        %ul
+          %li= link_to 'Edit boat', edit_boat_path(@boat)
+          %li= link_to 'Requests', requests_path(@boat)
 
   -# Content
   .column2

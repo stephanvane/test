@@ -6,6 +6,15 @@ Bha::Application.routes.draw do
   # Static pages
   get 'married' => 'pages#married'
   
+  #packages
+  get  'packages'            => 'packages#index',  :as => 'packages'
+  get  'packages/new'        => 'packages#new',    :as => 'new_package'
+  get  'packages/:name'      => 'packages#show',   :as => 'package'
+  post 'packages'            => 'packages#create', :as => 'requests'
+  get  'packages/:name/edit' => 'packages#edit',   :as => 'edit_package'
+  put 'packages/:id'        => 'packages#update', :as => 'package'
+
+  
   #boats
   get 'boats'     => 'boats#index'
   get ':url'      => 'boats#show', :as => 'boat'
@@ -13,8 +22,9 @@ Bha::Application.routes.draw do
   put ':id'      => 'boats#update', :as => 'boat'
   
   #requests
-  get ':url/request' => 'requests#new', :as => 'new_request'
-  post ':url/request' => 'requests#create', :as => 'requests'
+  get  ':url/request' => 'requests#new', :as => 'new_request'
+  post ':url/requests' => 'requests#create', :as => 'requests'
+  get  ':id/requests' => 'requests#index', :as => 'requests'
   
   # users
   devise_for :admins

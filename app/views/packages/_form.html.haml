@@ -1,0 +1,51 @@
+- if @package.errors.any?
+  .error
+    %ul.bottom
+      - @package.errors.full_messages.each do |msg|
+        %li= msg
+
+=form_for @package, :html => { :multipart => true } do |f|
+  %fieldset
+    .row
+      .column
+        =f.label :name
+        =f.text_field :name, :class => 'title'
+    .row
+      .column
+        =f.label :duration
+        =f.text_field :duration
+    .row
+      .column
+        =f.label :active
+        =f.check_box :active
+  %fieldset
+    .row
+      =f.label       :description
+      %br
+      =f.text_area   :description
+  %fieldset
+    .row
+      .column
+        = f.label :banner
+        = f.file_field :banner
+    .row
+      .column
+        = f.label :photos
+        = file_field_tag 'package[photos_attributes][][photo]', :multiple => true
+  %fieldset
+    .row
+      .column
+        =f.label :min_persons
+        =f.text_field :min_persons
+        =f.label :max_persons
+        =f.text_field :max_persons
+      .column
+        =f.label :price
+        =f.text_field :price
+        =f.label :discount_price
+        =f.text_field :discount_price
+  %fieldset
+    .row
+      =f.label :boarding_area
+      =f.text_area :boarding_area
+  =f.submit

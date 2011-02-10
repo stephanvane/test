@@ -41,7 +41,8 @@ class Boat < ActiveRecord::Base
     :association_foreign_key => "similar_boat_id",
     :join_table => "similar_boats"
   belongs_to :boat_company
-  has_many :photos, :as => :item, :dependent => :destroy  
+  has_many :photos, :as => :item, :dependent => :destroy
+  has_many :requests, :as => :requested
   accepts_nested_attributes_for :photos
   has_attached_file :banner, :styles => { :normal => '561x181#', 
                                           :thumbnail => '235x81#' }
@@ -55,6 +56,7 @@ class Boat < ActiveRecord::Base
   validates_numericality_of :max_persons, :max_persons_buffet, :max_persons_dinner
   validates_numericality_of :min_hours
   validates_format_of :url, :with => /^[\w\-]+$/
+  validates_attachment_presence :banner
   
   def display_name
     "#{self.boat_type.capitalize} #{self.name.capitalize}"

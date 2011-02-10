@@ -746,13 +746,15 @@ thead th {
 /* line 49, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style3 {
   margin-bottom: 10px;
+  overflow: hidden;
+  *zoom: 1;
 }
-/* line 51, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 52, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style3 .title {
   height: 28px;
   background: url('/images/subpage3_01.jpg?1294797413') no-repeat right top;
 }
-/* line 54, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 55, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style3 .title h2 {
   height: 28px;
   margin: 0px;
@@ -761,16 +763,16 @@ thead th {
   font-size: 11px;
   color: #394149;
 }
-/* line 63, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 64, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style3 .content {
   padding: 20px 15px 10px 15px;
 }
 
-/* line 68, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 69, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style4 {
   margin-bottom: 10px;
 }
-/* line 70, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 71, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style4 h2 {
   height: 20px;
   margin: 0px;
@@ -779,7 +781,7 @@ thead th {
   font-size: 11px;
   color: #FFFFFF;
 }
-/* line 78, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 79, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style4 .content {
   padding: 20px 15px 0px 15px;
   background: #E6E9EB;
@@ -787,11 +789,11 @@ thead th {
   border-bottom: 1px solid #FFFFFF;
 }
 
-/* line 86, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 87, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style5 {
   margin-bottom: 10px;
 }
-/* line 88, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 89, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style5 h2 {
   height: 20px;
   margin: 0px;
@@ -801,7 +803,7 @@ thead th {
   font-size: 11px;
   color: #FFFFFF;
 }
-/* line 98, ../../../app/stylesheets/partials/_boxes.scss */
+/* line 99, ../../../app/stylesheets/partials/_boxes.scss */
 .box-style5 .content {
   padding: 15px 13px;
   background: #E6E9EB;
@@ -908,91 +910,91 @@ form .field_with_errors {
   color: #8A1F11;
 }
 /* line 48, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat input.text, form.edit_boat input.title, form.edit_boat input[type=email], form.edit_boat input[type=text], form.edit_boat input[type=password] {
+form.edit_boat input.text, form.edit_boat input.title, form.edit_boat input[type=email], form.edit_boat input[type=text], form.edit_boat input[type=password], form.new_package input.text, form.new_package input.title, form.new_package input[type=email], form.new_package input[type=text], form.new_package input[type=password], form.edit_package input.text, form.edit_package input.title, form.edit_package input[type=email], form.edit_package input[type=text], form.edit_package input[type=password] {
   width: 120px;
 }
 /* line 50, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat textarea {
+form.edit_boat textarea, form.new_package textarea, form.edit_package textarea {
   width: 906px;
   height: 130px;
 }
 /* line 18, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat label {
+form.edit_boat label, form.new_package label, form.edit_package label {
   font-weight: bold;
 }
 /* line 19, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat fieldset {
+form.edit_boat fieldset, form.new_package fieldset, form.edit_package fieldset {
   padding: 1.4em;
   margin: 0 0 1.5em 0;
 }
 /* line 20, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat legend {
+form.edit_boat legend, form.new_package legend, form.edit_package legend {
   font-weight: bold;
   font-size: 1.2em;
 }
 /* line 26, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat input.text, form.edit_boat input.title, form.edit_boat input[type=email], form.edit_boat input[type=text], form.edit_boat input[type=password] {
+form.edit_boat input.text, form.edit_boat input.title, form.edit_boat input[type=email], form.edit_boat input[type=text], form.edit_boat input[type=password], form.new_package input.text, form.new_package input.title, form.new_package input[type=email], form.new_package input[type=text], form.new_package input[type=password], form.edit_package input.text, form.edit_package input.title, form.edit_package input[type=email], form.edit_package input[type=text], form.edit_package input[type=password] {
   margin: 0.5em 0;
   background-color: white;
   padding: 5px;
 }
 /* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat input.title {
+form.edit_boat input.title, form.new_package input.title, form.edit_package input.title {
   font-size: 1.5em;
 }
 /* line 31, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat input[type=checkbox], form.edit_boat input.checkbox, form.edit_boat input[type=radio], form.edit_boat input.radio {
+form.edit_boat input[type=checkbox], form.edit_boat input.checkbox, form.edit_boat input[type=radio], form.edit_boat input.radio, form.new_package input[type=checkbox], form.new_package input.checkbox, form.new_package input[type=radio], form.new_package input.radio, form.edit_package input[type=checkbox], form.edit_package input.checkbox, form.edit_package input[type=radio], form.edit_package input.radio {
   position: relative;
   top: 0.25em;
 }
 /* line 33, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat textarea {
+form.edit_boat textarea, form.new_package textarea, form.edit_package textarea {
   margin: 0.5em 0;
   padding: 5px;
 }
 /* line 34, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat select {
+form.edit_boat select, form.new_package select, form.edit_package select {
   margin: 0.5em 0;
 }
 /* line 59, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.edit_boat fieldset {
+form.edit_boat fieldset, form.new_package fieldset, form.edit_package fieldset {
   border: 1px solid #cccccc;
 }
 /* line 62, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
 form.edit_boat input.text, form.edit_boat input.title, form.edit_boat input[type=email], form.edit_boat input[type=text], form.edit_boat input[type=password],
-form.edit_boat textarea, form.edit_boat select {
+form.edit_boat textarea, form.edit_boat select, form.new_package input.text, form.new_package input.title, form.new_package input[type=email], form.new_package input[type=text], form.new_package input[type=password], form.new_package textarea, form.new_package select, form.edit_package input.text, form.edit_package input.title, form.edit_package input[type=email], form.edit_package input[type=text], form.edit_package input[type=password], form.edit_package textarea, form.edit_package select {
   border: 1px solid #bbbbbb;
 }
 /* line 64, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
 form.edit_boat input.text:focus, form.edit_boat input.title:focus, form.edit_boat input[type=email]:focus, form.edit_boat input[type=text]:focus, form.edit_boat input[type=password]:focus,
-form.edit_boat textarea:focus, form.edit_boat select:focus {
+form.edit_boat textarea:focus, form.edit_boat select:focus, form.new_package input.text:focus, form.new_package input.title:focus, form.new_package input[type=email]:focus, form.new_package input[type=text]:focus, form.new_package input[type=password]:focus, form.new_package textarea:focus, form.new_package select:focus, form.edit_package input.text:focus, form.edit_package input.title:focus, form.edit_package input[type=email]:focus, form.edit_package input[type=text]:focus, form.edit_package input[type=password]:focus, form.edit_package textarea:focus, form.edit_package select:focus {
   border: 1px solid #666666;
 }
 /* line 12, ../../../app/stylesheets/partials/_forms.scss */
-form.edit_boat .column {
+form.edit_boat .column, form.new_package .column, form.edit_package .column {
   width: 150px;
   margin-left: 10px;
   float: left;
 }
 /* line 13, ../../../app/stylesheets/partials/_forms.scss */
-form.edit_boat .column:first-child {
+form.edit_boat .column:first-child, form.new_package .column:first-child, form.edit_package .column:first-child {
   margin-left: 0;
 }
 /* line 21, ../../../app/stylesheets/partials/_forms.scss */
-form.edit_boat .row {
+form.edit_boat .row, form.new_package .row, form.edit_package .row {
   overflow: hidden;
   *zoom: 1;
 }
 /* line 25, ../../../app/stylesheets/partials/_forms.scss */
-form.edit_boat label {
+form.edit_boat label, form.new_package label, form.edit_package label {
   width: 120px;
 }
 /* line 28, ../../../app/stylesheets/partials/_forms.scss */
-form.edit_boat input.title {
+form.edit_boat input.title, form.new_package input.title, form.edit_package input.title {
   background: none;
 }
 /* line 31, ../../../app/stylesheets/partials/_forms.scss */
-form.edit_boat input[type=checkbox] {
+form.edit_boat input[type=checkbox], form.new_package input[type=checkbox], form.edit_package input[type=checkbox] {
   margin-right: 20px;
 }
 /* line 37, ../../../app/stylesheets/partials/_forms.scss */

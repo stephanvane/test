@@ -48,6 +48,7 @@
 
 .box-style3 {
   margin-bottom: 10px;
+  @include clearfix;
   .title {
   	height: 28px;
   	background: image_url('subpage3_01.jpg') no-repeat right top;
