@@ -20,7 +20,7 @@
       .content
         %h3.style1= @package.name.capitalize
         %div
-          = image_tag @package.banner.url(:normal), :class => 'border'
+          = image_tag @package.banner.url, :class => 'border'
           #order.border
             = link_to 'Aanvragen', new_request_path('url'), :remote => true
           #review_block
@@ -34,7 +34,7 @@
           %h2= "Pictures of #{@package.display_name}"
         .content.clearfix
           - @package.photos.each do |p|
-            = image_tag p.photo(:small)        
+            = image_tag p.photo(:small)
 
     -# Details
     #details.box-style3

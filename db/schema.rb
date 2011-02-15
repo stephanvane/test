@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110208001433) do
+ActiveRecord::Schema.define(:version => 20110214224017) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                              :default => "", :null => false
@@ -76,10 +76,7 @@ ActiveRecord::Schema.define(:version => 20110208001433) do
     t.boolean  "balcony"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "banner_file_name"
-    t.string   "banner_content_type"
-    t.integer  "banner_file_size"
-    t.datetime "banner_updated_at"
+    t.string   "banner"
   end
 
   create_table "boats_packages", :id => false, :force => true do |t|
@@ -105,24 +102,18 @@ ActiveRecord::Schema.define(:version => 20110208001433) do
     t.float    "duration"
     t.decimal  "price"
     t.string   "boarding_area"
-    t.boolean  "active",              :default => true
+    t.boolean  "active",         :default => true
     t.decimal  "discount_price"
-    t.integer  "order",               :default => 50
-    t.string   "banner_file_name"
-    t.string   "banner_content_type"
-    t.integer  "banner_file_size"
-    t.datetime "banner_updated_at"
+    t.integer  "order",          :default => 50
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "banner"
   end
 
   create_table "photos", :force => true do |t|
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.integer  "item_id"
-    t.string   "item_type"
+    t.integer "item_id"
+    t.string  "item_type"
+    t.string  "file"
   end
 
   create_table "requests", :force => true do |t|

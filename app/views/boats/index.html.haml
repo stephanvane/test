@@ -28,7 +28,7 @@
         %ul.list3
           - @boats.each do |boat|
             %li
-              = link_to image_tag(boat.banner.url(:thumbnail)), boat_path(boat.url)
+              = link_to image_tag(boat.banner.url(:thumb)), boat_path(boat.url)
               %p 
                 =link_to boat.display_name, boat_path(boat.url)
                 (85 reacties)

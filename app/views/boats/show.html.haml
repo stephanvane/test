@@ -26,7 +26,7 @@
       .content
         %h3.style1= @boat.display_name
         %div
-          = image_tag @boat.banner.url(:normal), :class => 'border'
+          = image_tag @boat.banner.url, :class => 'border'
           #order.border
             = link_to 'Aanvragen', new_request_path(), :remote => true
           #review_block
@@ -40,7 +40,7 @@
           %h2= "Pictures of #{@boat.display_name}"
         .content.clearfix
           - @boat.photos.each do |p|
-            = image_tag p.photo(:small)        
+            = image_tag p.file.url(:thumb)
 
     -# Details
     #details.box-style3

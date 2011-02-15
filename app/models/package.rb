@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110208001433
+# Schema version: 20110214224017
 #
 # Table name: packages
 #
@@ -14,6 +14,7 @@
 #  order          :integer         default(50)
 #  created_at     :datetime
 #  updated_at     :datetime
+#  banner         :string(255)
 #
 
 class Package < ActiveRecord::Base
@@ -24,13 +25,13 @@ class Package < ActiveRecord::Base
       :duration,
       :price
   validates_numericality_of :discount_price, :allow_nil => true
-  validates_attachment_presence :banner
   
   # relations
   has_and_belongs_to_many :boats
   has_many :photos, :as => :item, :dependent => :destroy
   has_many :requests, :as => :requested
-  accepts_nested_attributes_for :photos
-  has_attached_file :banner, :styles => { :normal => '561x181#', 
-                                          :thumbnail => '235x81#' }
+  # accepts_nested_attributes_for :photos
+  # has_attached_file :banner, :styles => { :normal => '561x181#', 
+  #                                        :thumbnail => '235x81#' }
+  mount_uploader :banner, BannerUploader
 end

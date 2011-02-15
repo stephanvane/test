@@ -17,7 +17,8 @@ gem "compass", ">= 0.10.6"
 gem 'annotate-models'
 gem 'jquery-rails'
 gem 'validates_timeliness'
-gem 'paperclip'
+gem 'carrierwave'
+gem 'rmagick'
 
 # Authentication
 gem 'devise'
