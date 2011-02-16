@@ -1,11 +1,6 @@
 require 'spec_helper'
 
 describe Package do
-  it 'has attachments' do
-    should have_attached_file :banner
-    should validate_attachment_presence :banner
-  end
-  
   it "must validate" do
     should validate_presence_of :name
     should validate_numericality_of :min_persons

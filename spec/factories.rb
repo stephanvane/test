@@ -11,7 +11,6 @@ Factory.define :boat do |b|
   b.max_persons_buffet 20
   b.max_persons_dinner 10
   b.min_hours 2
-  b.banner_file_name 'ondine.jpg'
   b.association :boat_company
 end
 
@@ -41,5 +40,4 @@ Factory.define :package do |p|
   p.max_persons 40
   p.duration 1.5
   p.price 42.50
-  p.banner_file_name 'Glühwein cruise.jpg'
 end

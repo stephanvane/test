@@ -48,7 +48,7 @@ class Boat < ActiveRecord::Base
   translates :boat_type, :url, :description
   
   # Validations
-  validates_presence_of :name, :boat_type, :description  
+  validates_presence_of :name, :boat_type, :description
   validates_numericality_of :price1, :price2, :price3
   validates_numericality_of :max_persons, :max_persons_buffet, :max_persons_dinner
   validates_numericality_of :min_hours
