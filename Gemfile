@@ -6,7 +6,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'mysql2'
 
 # i18n
-gem 'globalize3'
+gem 'globalize3', '0.1.0.beta'
+gem 'easy_globalize3_accessors'
 gem 'translate_routes'
 
 # Views

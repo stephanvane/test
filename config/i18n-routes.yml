@@ -1,9 +1,12 @@
 en:
-  married: getting-married
-  boats: all-boats
+  
+#   married: getting-married
+#   boats: all-boats
 nl:
-  married: trouwen
-  boats: alle-boten
+  
+#   married: trouwen
+#   boats: alle-boten
 fr:
-  married: se-marier
-  boats: tous-les-bateaux
+  
+#   married: se-marier
+#   boats: tous-les-bateaux

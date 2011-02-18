@@ -2,6 +2,10 @@
 #
 # Use this as the base for the locale file of your language.
 en:
+  en: 'English'
+  fr: 'French'
+  nl: 'Dutch'
+  
   date:
     formats:
       default: "%Y-%m-%d"

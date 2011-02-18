@@ -18,7 +18,11 @@
 #
 
 class Package < ActiveRecord::Base
+  # i18n
   translates :name, :description, :url
+  globalize_accessors :locales => [:en, :nl, :fr],
+                      :attributes => [:name, :description, :url]
+  
   validates_presence_of :name
   validates_numericality_of :min_persons, 
       :max_persons, 
@@ -34,4 +38,8 @@ class Package < ActiveRecord::Base
   # has_attached_file :banner, :styles => { :normal => '561x181#', 
   #                                        :thumbnail => '235x81#' }
   mount_uploader :banner, BannerUploader
+  
+  def to_param
+    self.url
+  end
 end

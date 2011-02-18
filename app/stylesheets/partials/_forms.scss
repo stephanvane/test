@@ -3,9 +3,9 @@ form {
     color: #8A1F11;
   }
   
-  // Boat form
+  // Boat / Package form
   &.edit_boat, &.new_package, &.edit_package {
-    @include blueprint-form-sizes(120px, 906px, 130px);
+    @include blueprint-form-sizes(220px, 700px, 130px);
     @include blueprint-form-layout;
     @include blueprint-form-borders;
     
@@ -13,7 +13,7 @@ form {
       &:first-child {
         margin-left: 0;
       }
-      width: 150px;
+      width: 250px;
       margin-left: 10px;
       float:left;
     }
@@ -27,9 +27,14 @@ form {
     }
     input.title {
       background: none;
+      width: 700px;
     }
     input[type=checkbox] {
       margin-right: 20px;
+    }
+    
+    #tabs {
+      margin-bottom: 1.5em;
     }
   }
   

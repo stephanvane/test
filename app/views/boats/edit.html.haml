@@ -11,12 +11,13 @@
     =form_for @boat, :html => { :multipart => true } do |f|
       %fieldset
         .row
-          .column
-            =f.label :boat_type
-            =f.text_field :boat_type, :class => 'title'
-          .column
-            =f.label :name
-            =f.text_field :name, :class => 'title'
+          =f.label :boat_type
+          %br
+          =f.text_field :boat_type, :class => 'title'
+        .row
+          =f.label :name
+          %br
+          =f.text_field :name, :class => 'title'
         .row
           .column
             =f.label :min_hours

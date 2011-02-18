@@ -18,17 +18,18 @@ class PackagesController < ApplicationController
   end
   
   def show
-    @package = Package.find_first_by_name(params[:name])
+    @package = Package.find_first_by_url(params[:url])
   end
   
   def edit
-    @package = Package.find_first_by_name(params[:name])
+    @package = Package.find(params[:id])
+    #@package = Package.find_first_by_url(params[:url])
   end
   
   def update
-    @package = Package.find(params[:id])
+    @package = Package.find_first_by_url(params[:url])
     if @package.update_attributes(params[:package])
-      redirect_to package_path(@package.name)
+      redirect_to package_path(@package)
     else
       render :action => :edit
     end

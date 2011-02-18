@@ -6,25 +6,23 @@ Bha::Application.routes.draw do
   # Static pages
   get 'married' => 'pages#married'
   
-  #packages
-  get  'packages'            => 'packages#index',  :as => 'packages'
-  get  'packages/new'        => 'packages#new',    :as => 'new_package'
-  get  'packages/:name'      => 'packages#show',   :as => 'package'
-  post 'packages'            => 'packages#create', :as => 'requests'
-  get  'packages/:name/edit' => 'packages#edit',   :as => 'edit_package'
-  put 'packages/:id'        => 'packages#update', :as => 'package'
+  #packages 
+  get  '/packages'            => 'packages#index',  :as => 'package_index'
+  get  '/packages/new'        => 'packages#new',    :as => 'new_package'
+  post '/packages'            => 'packages#create'
+  get  '/packages/:id/edit'  => 'packages#edit',   :as => 'edit_package'
+  put  '/packages/:url'       => 'packages#update'
+  get  '/packages/:url'       => 'packages#show', :as => 'package'
 
+  #requests
+  get  ':url/request' => 'requests#new', :as => 'new_request'
+  post ':url/requests' => 'requests#create', :as => 'requests'
   
   #boats
   get 'boats'     => 'boats#index'
   get ':url'      => 'boats#show', :as => 'boat'
   get ':id/edit'  => 'boats#edit', :as => 'edit_boat'
   put ':id'      => 'boats#update', :as => 'boat'
-  
-  #requests
-  get  ':url/request' => 'requests#new', :as => 'new_request'
-  post ':url/requests' => 'requests#create', :as => 'requests'
-  get  ':id/requests' => 'requests#index', :as => 'requests'
   
   # users
   devise_for :admins

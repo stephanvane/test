@@ -9,6 +9,12 @@
         %li asdf
         %li asdf
         %li asdf
+    - if can? :edit, @package
+      .box-style1
+        %h2 Admin
+        %ul
+          %li= link_to 'Edit', edit_package_path(@package.id)
+        
 
   -# Content
   .column2

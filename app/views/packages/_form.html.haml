@@ -5,11 +5,26 @@
         %li= msg
 
 =form_for @package, :html => { :multipart => true } do |f|
+  #tabs
+    %ul
+      - I18n.available_locales.each do |locale|
+        %li= link_to t(locale), "#tab-#{locale}"
+
+    - I18n.available_locales.each do |locale|
+      %div{:id => "tab-#{locale}"}
+        .row
+          = f.label      "name_#{locale}", 'Name'
+          %br
+          = f.text_field "name_#{locale}", :class => 'title'
+        .row
+          = f.label      "description_#{locale}", 'Description'
+          %br
+          = f.text_area  "description_#{locale}"
+        .row
+          = f.label      "url_#{locale}", 'Url'
+          %br
+          = f.text_field "url_#{locale}"
   %fieldset
-    .row
-      .column
-        =f.label :name
-        =f.text_field :name, :class => 'title'
     .row
       .column
         =f.label :duration
@@ -18,30 +33,36 @@
       .column
         =f.label :active
         =f.check_box :active
-  %fieldset
-    .row
-      =f.label       :description
-      %br
-      =f.text_area   :description
+
   %fieldset
     .row
       .column
         = f.label :banner
         = f.file_field :banner
+        = f.hidden_field :banner_cache
+      - if @package.banner
+        .column
+          = image_tag(@package.banner.url(:thumb), :class => 'border')
   %fieldset
     .row
       .column
         =f.label :min_persons
         =f.text_field :min_persons
+        %br
         =f.label :max_persons
         =f.text_field :max_persons
       .column
         =f.label :price
         =f.text_field :price
+        %br
         =f.label :discount_price
         =f.text_field :discount_price
   %fieldset
     .row
       =f.label :boarding_area
+      %br
       =f.text_area :boarding_area
   =f.submit
+  
+:javascript
+  $('#tabs').tabs();

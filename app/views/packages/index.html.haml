@@ -27,10 +27,10 @@
         %ul.list3
           - @packages.each do |package|
             %li
-              = link_to image_tag(package.banner.url(:thumb)), package_path(package.name)
-              %p 
-                =link_to package.name, package_path(package.name)
+              = link_to image_tag(package.banner.url(:thumb)), package_path(package.url)
+              %p
+                =link_to package.name, package_path(package.url)
               %p
                 =truncate package.description, :separator => ' ', :length => 235
               %p
-                =link_to 'Meer informatie', package_path(package.name)
+              =link_to 'Meer informatie', package_path(package.url)

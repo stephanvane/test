@@ -32,6 +32,7 @@
           #review_block
             asdfasdf
           %p= @boat.description
+          %p= url_for(:locale => 'en', :controller => 'requests', :action => 'create')
           
     -# Photo's
     - if @boat.photos.any?

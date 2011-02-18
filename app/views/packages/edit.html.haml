@@ -1,10 +1,11 @@
 .box-style3
   .content
     %h3.style1 Edit Package #{@package.name}
-    
-    - if @package.errors.any?
-      .error
-        %ul.bottom
-          - @package.errors.full_messages.each do |msg|
-            %li= msg
+
+    -#
+      - if @package.errors.any?
+        .error
+          %ul.bottom
+            - @package.errors.full_messages.each do |msg|
+              %li= msg
     = render 'form'
