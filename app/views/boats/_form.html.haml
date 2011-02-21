@@ -1,0 +1,113 @@
+- if @boat.errors.any?
+  .error
+    %ul.bottom
+      - @boat.errors.full_messages.each do |msg|
+        %li= msg
+
+=form_for @boat, :html => { :multipart => true } do |f|
+  %fieldset
+    .row
+      =f.label :name
+      %br
+      =f.text_field :name, :class => 'title'
+    .row
+      .column
+        =f.label :min_hours
+        %br
+        =f.text_field :min_hours
+    .row
+      .column
+        =f.label :active
+        %br
+        =f.check_box :active
+
+  // Tabs  
+  #tabs
+    %ul
+      - I18n.available_locales.each do |locale|
+        %li= link_to t(locale), "#tab-#{locale}"
+    - I18n.available_locales.each do |locale|
+      %div{:id => "tab-#{locale}"}
+        .row
+          =f.label  "boat_type_#{locale}", 'Boat type'
+          %br
+          =f.text_field "boat_type_#{locale}"
+        .row
+          =f.label "description_#{locale}", 'Description'
+          %br
+          =f.text_area "description_#{locale}"
+        .row
+          =f.label "url_#{locale}", 'Url'
+          %br
+          =f.text_field "url_#{locale}"
+
+  %fieldset
+    .row
+      .column
+        = f.label :banner
+        %br
+        = f.file_field :banner
+      - if @boat.banner
+        .column
+          = image_tag(@boat.banner.url(:thumb), :class => 'border')
+    .row
+      .column
+        = f.label :photos
+        %br
+        = file_field_tag 'boat[photos_attributes][][file]', :multiple => true
+      .column
+        %table
+          = f.fields_for :photos do |p|
+            %tr
+              %td= p.label :_destroy, image_tag(p.object.file.url(:thumb), :class => 'border')
+              %td= p.check_box :_destroy
+  %fieldset
+    .row
+      .column
+        =f.label :max_persons
+        %br
+        =f.text_field :max_persons
+        %br
+        =f.label :max_persons_buffet
+        %br
+        =f.text_field :max_persons_buffet
+        %br
+        =f.label :max_persons_dinner
+        %br
+        =f.text_field :max_persons_dinner
+      .column
+        =f.label :price1
+        %br
+        =f.text_field :price1
+        %br
+        =f.label :price2
+        %br
+        =f.text_field :price2
+        %br
+        =f.label :price3
+        %br
+        =f.text_field :price3
+  %fieldset
+    .row
+      =f.label     :toilet
+      =f.check_box :toilet
+      =f.label     :bar
+      =f.check_box :bar
+      =f.label     :music
+      =f.check_box :music
+      =f.label     :heating
+      =f.check_box :heating
+      =f.label     :environment
+      =f.check_box :environment
+      =f.label     :power
+      =f.check_box :power
+      =f.label     :windows
+      =f.check_box :windows
+      =f.label     :wheelchair
+      =f.check_box :wheelchair
+      =f.label     :balcony
+      =f.check_box :balcony
+  =f.submit
+  
+:javascript
+  $('#tabs').tabs();

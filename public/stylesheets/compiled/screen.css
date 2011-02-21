@@ -972,7 +972,6 @@ form.edit_boat textarea:focus, form.edit_boat select:focus, form.new_package inp
 }
 /* line 12, ../../../app/stylesheets/partials/_forms.scss */
 form.edit_boat .column, form.new_package .column, form.edit_package .column {
-  width: 250px;
   margin-left: 10px;
   float: left;
 }

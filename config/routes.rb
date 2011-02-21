@@ -7,11 +7,11 @@ Bha::Application.routes.draw do
   get 'married' => 'pages#married'
   
   #packages 
-  get  '/packages'            => 'packages#index',  :as => 'package_index'
+  get  '/packages'            => 'packages#index',  :as => 'packages'
   get  '/packages/new'        => 'packages#new',    :as => 'new_package'
   post '/packages'            => 'packages#create'
-  get  '/packages/:id/edit'  => 'packages#edit',   :as => 'edit_package'
-  put  '/packages/:url'       => 'packages#update'
+  get  '/packages/:id/edit'   => 'packages#edit',   :as => 'edit_package'
+  put  '/packages/:id'        => 'packages#update'
   get  '/packages/:url'       => 'packages#show', :as => 'package'
 
   #requests

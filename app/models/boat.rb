@@ -38,14 +38,14 @@ class Boat < ActiveRecord::Base
     :association_foreign_key => "similar_boat_id",
     :join_table => "similar_boats"
   belongs_to :boat_company
-  #has_many :photos, :as => :item, :dependent => :destroy
   has_many :photos, :as => :item, :dependent => :destroy
   has_many :requests, :as => :requested
-  accepts_nested_attributes_for :photos
+  accepts_nested_attributes_for :photos, :allow_destroy => true
   mount_uploader :banner, BannerUploader
   
   # Translations
   translates :boat_type, :url, :description
+  globalize_accessors :locales => [:en, :nl, :fr]
   
   # Validations
   validates_presence_of :name, :boat_type, :description

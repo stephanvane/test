@@ -4,7 +4,7 @@
       - @package.errors.full_messages.each do |msg|
         %li= msg
 
-=form_for @package, :html => { :multipart => true } do |f|
+=form_for @package, :url => package_path(@package.id), :html => { :multipart => true } do |f|
   #tabs
     %ul
       - I18n.available_locales.each do |locale|

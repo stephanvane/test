@@ -20,10 +20,9 @@
 class Package < ActiveRecord::Base
   # i18n
   translates :name, :description, :url
-  globalize_accessors :locales => [:en, :nl, :fr],
-                      :attributes => [:name, :description, :url]
+  globalize_accessors :locales => I18n.available_locales
   
-  validates_presence_of :name
+  validates_presence_of :name, :description, :url
   validates_numericality_of :min_persons, 
       :max_persons, 
       :duration,

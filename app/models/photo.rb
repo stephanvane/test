@@ -10,9 +10,12 @@
 #
 
 class Photo < ActiveRecord::Base
-  # has_attached_file :photo, :styles => {
-  #   :small => "212x142#",
-  #   :large => "500x375>"
-  # }
   mount_uploader :file, PhotoUploader
+  
+  def file=(val)
+    if !val.is_a?(String) && valid?
+      file_will_change!
+      super
+    end
+  end
 end

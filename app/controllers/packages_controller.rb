@@ -27,9 +27,14 @@ class PackagesController < ApplicationController
   end
   
   def update
-    @package = Package.find_first_by_url(params[:url])
+    @package = Package.find(params[:id])
+
     if @package.update_attributes(params[:package])
-      redirect_to package_path(@package)
+      if @package.url
+        redirect_to package_path(@package)
+      else
+        redirect_to packages_path
+      end
     else
       render :action => :edit
     end
