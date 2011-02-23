@@ -5,6 +5,7 @@ class BoatsController < ApplicationController
   
   def show
     @boat = Boat.find_first_by_url(params[:url])
+    @request = Request.new
   end
   
   def edit
@@ -19,5 +20,10 @@ class BoatsController < ApplicationController
     else
       render :action => :edit
     end
+  end
+  
+  def request_form
+    @request = Request.new
+    @request.requested = Boat.find_by_url(params[:url]).first
   end
 end

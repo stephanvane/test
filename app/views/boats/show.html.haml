@@ -28,7 +28,8 @@
         %div
           = image_tag @boat.banner.url, :class => 'border'
           #order.border
-            = link_to 'Aanvragen', new_request_path(), :remote => true
+            %a Aanvragen
+            -#= link_to 'Aanvragen', new_request_path(), :remote => true
           #review_block
             asdfasdf
           %p= @boat.description
@@ -161,3 +162,12 @@
                 =truncate boat.description, :separator => ' ', :length => 235
               %p
                 =link_to 'Meer informatie', boat_path(boat.url)
+    #form_container.hidden
+      = render 'requests/form'
+      
+:javascript
+  $('#order a').colorbox({
+    href: '#request_form',
+    inline: true
+  });
+  $('#request_date').datepicker();

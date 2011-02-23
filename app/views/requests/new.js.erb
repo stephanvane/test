@@ -1,6 +1,9 @@
+//$('#form_container').html("<%= escape_javascript render 'form' %>");
+
 $.colorbox({
-  html: "<%= escape_javascript render 'form' %>",
-  overlayClose: false
+  html: "<%= escape_javascript render 'form' %>"
+  //inline: true,
+  //href: '#request_form'
 });
 
 dp = $('#request_date').datepicker({

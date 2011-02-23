@@ -22,6 +22,8 @@ class Package < ActiveRecord::Base
   translates :name, :description, :url
   globalize_accessors :locales => I18n.available_locales
   
+  has_friendly_id :name
+  
   validates_presence_of :name, :description, :url
   validates_numericality_of :min_persons, 
       :max_persons, 
@@ -38,7 +40,7 @@ class Package < ActiveRecord::Base
   #                                        :thumbnail => '235x81#' }
   mount_uploader :banner, BannerUploader
   
-  def to_param
-    self.url
-  end
+  # def to_param
+  #   self.url
+  # end
 end
